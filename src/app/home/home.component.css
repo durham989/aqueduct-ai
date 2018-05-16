@@ -1,0 +1,158 @@
+/*styles for home content only*/
+.header-background {
+  background-image: url("../../assets/img/aqueduct_header_background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.header-headline {
+  font-size : 60px;
+  letter-spacing : 3px;
+  color : #A4BDBF;
+  color : rgb(164, 189, 191);
+  cursor: default;
+}
+
+.header-paragraph {
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #8E9C8F;
+}
+
+.see-how-button {
+  color: #A4BDBF;
+  font-size: 24px;
+  text-transform: uppercase;
+  border: 2px solid #A4BDBF;
+  background-color: transparent;
+  -webkit-font-smoothing: subpixel-antialiased;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.see-how-button:hover {
+  color: #FFFFFF;
+  background-color: #A4BDBF;
+}
+
+.white-background {
+  background-color: #FFFFFF;
+}
+
+.who-we-are-header {
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  color: #354948;
+  font-size: 36px;
+  cursor: default;
+}
+
+.who-we-are-paragraph {
+  color: #A8BCB9;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.learn-more-action {
+  font-weight: bold;
+  font-size: 20px;
+  color: #354948;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.leak-stat {
+  max-width: 50%;
+  height: auto;
+}
+
+.how-we-help-header {
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  color: #354948;
+  font-size: 36px;
+  cursor: default;
+}
+
+.how-we-help-background {
+  background-image: url("../../assets/img/how-we-help-image.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.know-infrastructure-header {
+  font-weight : 500;
+  font-size : 24px;
+  color : #354948;
+  cursor: default;
+}
+
+.control-risks-background {
+  background-image: url("../../assets/img/control-your-risks.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.control-risks-header {
+  font-weight : 500;
+  font-size : 24px;
+  color : #354948;
+  cursor: default;
+}
+
+.how-it-works-header {
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  color: #354948;
+  font-size: 36px;
+  cursor: default;
+}
+
+.how-it-works-card-container {
+  border: 2px solid #a8bcb9;
+}
+
+.how-it-works-card-number {
+  text-align: center;
+  font-size: 36px;
+  color: #354948;
+}
+
+.how-it-works-card-text {
+  text-align: center;
+  font-size: 18px;
+  color: #a8bcb9;
+}
+
+.step-card-responsive {
+  max-width: 70%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.svg-container {
+  max-width: 30%;
+  height: auto;
+}
+
+.schedule-consultation-button {
+  color: #A4BDBF;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: 2px solid #A4BDBF;
+  background-color: transparent;
+  -webkit-font-smoothing: subpixel-antialiased;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.schedule-consultation-button:hover {
+  color: #FFFFFF;
+  background-color: #A4BDBF;
+}

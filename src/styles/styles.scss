@@ -1,0 +1,77 @@
+/* this file will be extracted to main dist folder and is imported in index.html */
+/* This file is for setting global styles  */
+@import 'variables';
+@import url("https://use.typekit.net/mpg2ijp.css");
+@import '~bootstrap/scss/bootstrap.scss';
+@import 'apple_devices';
+@import 'devices.min.css';
+
+body {
+  margin: 0;
+  font-family: soleil, sans-serif !important;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+section {
+  min-height: 100vh;
+}
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#particles-js-2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#particles-js-3 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+#modal-container {
+  position: fixed;
+  top: 300px;
+  left: 50%;
+  width: 100%;
+  background: #FFFFFF;
+  text-align: center;
+  box-shadow: 0px 0px 2px 1px #000000;
+  z-index: 100;
+}
+
+#overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+}
+

@@ -48,7 +48,7 @@
     "github-deploy": "npm run github-deploy:dev",
     "lint": "npm run tslint \"src/**/*.ts\"",
     "node": "node",
-    "postinstall": "ng build --prod",
+    "postinstall": "npm run build:prod",
     "postinstall-webdriver": "npm run webdriver:update",
     "postversion": "git push && git push --tags",
     "preclean:install": "npm run clean",

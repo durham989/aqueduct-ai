@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { NgxSmartModalModule } from 'ngx-smart-modal';
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -17,6 +18,12 @@ import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 
+// Services
+import { ScrollService } from './services/scroll.service';
+import { DomService } from './services/dom.service';
+import { ModalService } from './services/modal.service';
+import { ConsultationService } from './services/consultation.service';
+
 // Components
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
@@ -24,6 +31,7 @@ import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
 import { DevModuleModule } from './+dev-module';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ConsultationComponent } from './consultation/consultation.component';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
@@ -51,7 +59,8 @@ interface StoreType {
     HomeComponent,
     NoContentComponent,
     XLargeDirective,
-    NavbarComponent
+    NavbarComponent,
+    ConsultationComponent,
   ],
   /**
    * Import Angular's modules.
@@ -60,6 +69,7 @@ interface StoreType {
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot(ROUTES, {
       useHash: Boolean(history.pushState) === false,
@@ -67,6 +77,7 @@ interface StoreType {
     }),
     AngularFontAwesomeModule,
     ScrollToModule.forRoot(),
+    NgxSmartModalModule.forRoot(),
 
     /**
      * This section will import the `DevModuleModule` only in certain build types.
@@ -80,7 +91,11 @@ interface StoreType {
    */
   providers: [
     environment.ENV_PROVIDERS,
-    APP_PROVIDERS
-  ]
+    APP_PROVIDERS,
+    ScrollService,
+    DomService,
+    ModalService,
+    ConsultationService
+  ],
 })
 export class AppModule {}

@@ -18,9 +18,7 @@ import { AppState } from './app.service';
   templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
-  public name = 'Angular Starter';
-  public tipe = 'assets/img/tipe.png';
-  public twitter = 'https://twitter.com/gdi2290';
+  public name = 'Aqueduct';
   public url = 'https://aqueduct.ai';
   public showDevModule: boolean = environment.showDevModule;
 

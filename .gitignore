@@ -80,3 +80,5 @@ webpack-cache
 *.css.shim.ts
 *.ngsummary.json
 *.shim.ngstyle.ts
+sendgrid.env
+.env

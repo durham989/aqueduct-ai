@@ -21,22 +21,6 @@
   color: #8E9C8F;
 }
 
-.see-how-button {
-  color: #A4BDBF;
-  font-size: 24px;
-  text-transform: uppercase;
-  border: 2px solid #A4BDBF;
-  background-color: transparent;
-  -webkit-font-smoothing: subpixel-antialiased;
-  cursor: pointer;
-  letter-spacing: 2px;
-}
-
-.see-how-button:hover {
-  color: #FFFFFF;
-  background-color: #A4BDBF;
-}
-
 .white-background {
   background-color: #FFFFFF;
 }
@@ -136,23 +120,28 @@
   transform-style: preserve-3d;
 }
 
-.svg-container {
-  max-width: 30%;
-  height: auto;
+.flip-vertical-right {
+	-webkit-animation: flip-vertical-right 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: flip-vertical-right 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
 
-.schedule-consultation-button {
-  color: #A4BDBF;
-  font-size: 18px;
-  text-transform: uppercase;
-  border: 2px solid #A4BDBF;
-  background-color: transparent;
-  -webkit-font-smoothing: subpixel-antialiased;
-  cursor: pointer;
-  letter-spacing: 2px;
+@-webkit-keyframes flip-vertical-right {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
 }
-
-.schedule-consultation-button:hover {
-  color: #FFFFFF;
-  background-color: #A4BDBF;
+@keyframes flip-vertical-right {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
 }

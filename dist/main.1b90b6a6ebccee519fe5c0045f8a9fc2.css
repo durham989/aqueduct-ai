@@ -6723,6 +6723,108 @@ a.text-dark:hover, a.text-dark:focus {
   border-right: 40px solid #d2d2d2;
   border-bottom: 45px solid #a0a0a0; }
 
+body.dialog-open {
+  overflow: hidden; }
+  body.dialog-open ngx-smart-modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto; }
+
+.nsm-dialog-btn-close {
+  border: 0;
+  background: none;
+  color: #2d2d2d;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 1.2em;
+  cursor: pointer; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  transition: all 500ms;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999; }
+  .overlay.nsm-overlay-close, .overlay.transparent {
+    background-color: transparent; }
+
+.nsm-dialog {
+  position: absolute; }
+  .nsm-dialog:not(.nsm-dialog-open), .nsm-dialog:not(.nsm-dialog-close) {
+    opacity: 0;
+    min-height: 0;
+    width: 0;
+    max-width: 0;
+    visibility: hidden;
+    overflow: hidden; }
+  .nsm-dialog.nsm-dialog-open {
+    opacity: 1;
+    visibility: visible;
+    min-height: 200px;
+    width: 90%;
+    max-width: 520px;
+    background-color: #fff;
+    border-radius: 2px;
+    right: 0;
+    left: 0;
+    top: 5%;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 12px;
+    box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12); }
+    @media (min-width: 768px) {
+      .nsm-dialog.nsm-dialog-open {
+        margin-bottom: 40px; } }
+  .nsm-dialog.nsm-dialog-close {
+    opacity: 0; }
+
+/* *************************
+* Animations
+* *************************/
+.nsm-dialog-animation-fade {
+  transition: opacity 500ms; }
+
+.nsm-dialog-animation-ltr {
+  left: -50%;
+  transition: left 500ms ease-in-out, opacity 500ms; }
+  .nsm-dialog-animation-ltr.nsm-dialog-open {
+    left: 0; }
+  .nsm-dialog-animation-ltr.nsm-dialog-close {
+    left: -50%; }
+
+.nsm-dialog-animation-rtl {
+  right: -50%;
+  transition: right 500ms ease-in-out, opacity 500ms; }
+  .nsm-dialog-animation-rtl.nsm-dialog-open {
+    right: 0; }
+  .nsm-dialog-animation-rtl.nsm-dialog-close {
+    right: -50%; }
+
+.nsm-dialog-animation-ttb {
+  top: -50%;
+  transition: top 500ms ease-in-out, opacity 500ms; }
+  .nsm-dialog-animation-ttb.nsm-dialog-open {
+    top: 5%; }
+  .nsm-dialog-animation-ttb.nsm-dialog-close {
+    top: -50%; }
+
+.nsm-dialog-animation-btt {
+  top: 100%;
+  transition: top 500ms ease-in-out, opacity 500ms; }
+  .nsm-dialog-animation-btt.nsm-dialog-open {
+    top: 5%; }
+  .nsm-dialog-animation-btt.nsm-dialog-close {
+    top: 100%; }
+
 body {
   margin: 0;
   font-family: soleil, sans-serif !important;
@@ -6762,22 +6864,46 @@ section {
 .show {
   display: block; }
 
-#modal-container {
-  position: fixed;
-  top: 300px;
-  left: 50%;
-  width: 100%;
-  background: #FFFFFF;
-  text-align: center;
-  box-shadow: 0px 0px 2px 1px #000000;
-  z-index: 100; }
+body.dialog-open ngx-smart-modal {
+  position: fixed !important;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll !important; }
 
-#overlay {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 99;
-  width: 100%;
-  height: 100%; }
+body.dialog-open {
+  overflow: scroll !important; }
 
-/*# sourceMappingURL=main.bc62f8a20b9b7571094307d61ec84365.css.map*/
+.overlay {
+  overflow-y: scroll !important; }
+
+.schedule-consultation-button {
+  color: #A4BDBF;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: 2px solid #A4BDBF;
+  background-color: transparent;
+  -webkit-font-smoothing: subpixel-antialiased;
+  cursor: pointer;
+  letter-spacing: 2px; }
+
+.schedule-consultation-button:hover {
+  color: #FFFFFF;
+  background-color: #A4BDBF; }
+
+.see-how-button {
+  color: #A4BDBF;
+  font-size: 24px;
+  text-transform: uppercase;
+  border: 2px solid #A4BDBF;
+  background-color: transparent;
+  -webkit-font-smoothing: subpixel-antialiased;
+  cursor: pointer;
+  letter-spacing: 2px; }
+
+.see-how-button:hover {
+  color: #FFFFFF;
+  background-color: #A4BDBF; }
+
+/*# sourceMappingURL=main.1b90b6a6ebccee519fe5c0045f8a9fc2.css.map*/

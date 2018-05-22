@@ -16,7 +16,12 @@ var connection = mysql.createConnection({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE
 });
-connection.connect();
+
+connection.connect(function(err) {
+  console.log(err.code);
+  return connection;
+});
+
 
 var app = express();
 // var consultation = require('./routes/consultation/consultation');

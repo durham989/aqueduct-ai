@@ -17,9 +17,9 @@ var connection = mysql.createConnection({
   database: process.env.DB_DATABASE
 });
 
-connection.connect(function(err) {
-  console.log(err.code);
-  return connection;
+connection.connect();
+connection.on('error', function(err) {
+  console.log(err.code); // 'ER_BAD_DB_ERROR'
 });
 
 

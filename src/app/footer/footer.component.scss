@@ -1,0 +1,29 @@
+.social-footer-inner {
+  transition: all .25s ease-in-out .1s;
+}
+
+.footer-section {
+  color: rgba(255,255,255,.4);
+  /* background-color: #201a16; */
+  background-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+.all-rights-reserved {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: .5px;
+  line-height: 1.6em;
+  color: #888888;
+}
+
+.all-rights-reserved-link {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: .5px;
+  line-height: 1.6em;
+  color: #888888;
+  cursor: pointer; 
+}

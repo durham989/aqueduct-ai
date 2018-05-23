@@ -34,6 +34,9 @@
   <div id="particles-js"></div>
   <div class="container py-5">
     <div class="row py-5 align-items-center align-content-center">
+      <!-- <ngx-smart-modal #whitepaperModal identifier="whitepaperModal">
+        <aqueduct-whitepaper-form></aqueduct-whitepaper-form>
+      </ngx-smart-modal> -->
       <div class="col-sm-12 col-md-12 col-lg-7">
         <h1 class="who-we-are-header">
           Making the World Work
@@ -52,6 +55,10 @@
           Learn More
           <fa name="chevron-right" class="pl-2"></fa>
         </div>
+        <!-- <div class="learn-more-action pt-4" (click)="whitepaperModal.open()">
+          Our Whitepaper
+          <fa name="chevron-right" class="pl-2"></fa>
+        </div> -->
       </div>
       <div class="col-lg-5">
         <img src="../../assets/img/aqueduct_stat.png" class="leak-stat float-right">
@@ -174,7 +181,12 @@
           to manage the risks facing your entire public water system.
         </p>
       </div>
-      <div class="col-sm-12 col-md-12 col-lg-4 pt-4"></div>
+      <div class="col-sm-12 col-md-12 col-lg-4 pt-4">
+        <div class="learn-more-action pt-4" (click)="openModalType('whitepaperModal')">
+          Our Whitepaper
+          <fa name="chevron-right" class="pl-2"></fa>
+        </div>
+      </div>
       <div class="col-sm-12 col-md-12 col-lg-4 text-align-center pt-4">
         <h1 class="know-infrastructure-header py-2">
           Positive Bottom-Line Results
@@ -188,7 +200,7 @@
     <!-- <div class="row align-items-center">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
         <ngx-smart-modal #whitepaperModal identifier="whitepaperModal">
-          <aqueduct-consultation-form></aqueduct-consultation-form>
+          <aqueduct-whitepaper-form></aqueduct-whitepaper-form>
         </ngx-smart-modal>
         <div class="learn-more-action pt-4" (click)="whitepaperModal.open()">
           Our Whitepaper
@@ -244,16 +256,24 @@
       </div>
     </div>
     <div class="row py-5">
-      <ngx-smart-modal #consultationModal identifier="consultationModal">
-        <aqueduct-consultation-form></aqueduct-consultation-form>
-      </ngx-smart-modal>
       <div class="col-lg-4"></div>
       <div class="col-sm-12 col-md-12 col-lg-4 text-align-center">
-        <button class="schedule-consultation-button p-3" (click)="consultationModal.open()">
+        <button class="schedule-consultation-button p-3" (click)="openModalType('consultationModal')">
           Get Started
         </button>
       </div>
       <div class="col-lg-4"></div>
     </div>
+    <aqueduct-footer></aqueduct-footer>
   </div>
 </section>
+
+
+<ngx-smart-modal #consultationModal identifier="consultationModal">
+  <div *ngIf="modalName == 'consultationModal'">
+    <aqueduct-consultation-form></aqueduct-consultation-form>
+  </div>
+  <div *ngIf="modalName == 'whitepaperModal'">
+    <aqueduct-whitepaper-form></aqueduct-whitepaper-form>
+  </div>
+</ngx-smart-modal>

@@ -1,22 +1,23 @@
-<h4 class="text-align-center consultation-form-header">Free Consultation with Aqueduct</h4>
-<form [formGroup]="consultationForm" (ngSubmit)="submitConsultationForm()">
+<h4 class="text-align-center consultation-form-header py-2">Free Consultation with Aqueduct</h4>
+<p class="text-align-left consultation-form-paragraph py-2">Interested in learning how Aqueduct can build a custom machine learning algorithm tailored to your organization's objectives? Fill out the form below and we'll reach out to schedule a 30-minute consultation, on the house!</p>
+<form [formGroup]="consultationForm" (ngSubmit)="submitConsultationForm()" class="py-2">
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="consultFirstName">First Name</label>
+      <label for="consultFirstName">First Name *</label>
       <input type="text" class="form-control" id="consultFirstName" placeholder="First Name" formControlName="consultFirstName">
     </div>
     <div class="form-group col-md-6">
-      <label for="consultLastName">Last Name</label>
+      <label for="consultLastName">Last Name *</label>
       <input type="text" class="form-control" id="consultLastName" placeholder="Last Name" formControlName="consultLastName">
     </div>
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="consultEmailAddress">Email Address</label>
+      <label for="consultEmailAddress">Email Address *</label>
       <input type="email" class="form-control" id="consultEmailAddress" placeholder="Email Address" formControlName="consultEmailAddress">
     </div>
     <div class="form-group col-md-6">
-      <label for="consultFirmName">Company or Organization</label>
+      <label for="consultFirmName">Company or Organization *</label>
       <input type="text" class="form-control" id="consultFirmName" placeholder="Company or Organization" formControlName="consultOrgName">
     </div>
   </div>

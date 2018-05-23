@@ -145,3 +145,9 @@
             transform: rotateY(180deg);
   }
 }
+
+@media (max-width: 575.98px) { 
+  .header-headline {
+    font-size: 48px;
+  }
+ }

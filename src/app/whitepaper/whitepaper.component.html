@@ -1,0 +1,20 @@
+<h4 class="text-align-center whitepaper-form-header py-2">Download the Aqueduct Whitepaper</h4>
+<p class="text-align-left whitepaper-form-paragraph py-2">In our 'Water Utilities and Machine Learning' whitepaper, you'll learn how machine learning can help you:</p>
+<ul class="fa-ul text-align-left whitepaper-form-paragraph py-2">
+  <li><span class="fa-li"><i class="fas fa-check"></i></span>Identify and repair leaks faster than ever</li>
+  <li><span class="fa-li"><i class="fas fa-check"></i></span>Assess the health of your assets and defer investment</li>
+  <li><span class="fa-li"><i class="fas fa-check"></i></span>Strengthen your business intelligence through monthly reporting</li>
+  <li><span class="fa-li"><i class="fas fa-check"></i></span>Mine data insights from SCADA and GIS databases</li>
+</ul>
+<p class="text-align-left whitepaper-form-paragraph py-2">After filling out the form below and clicking submit, we will email you the whitepaper.</p>
+<form [formGroup]="whitepaperForm" (ngSubmit)="submitWhitepaperForm()" class="py-2">
+  <div class="form-group">
+    <label for="whitepaperFullName">Full Name *</label>
+    <input type="text" class="form-control" id="whitepaperFullName" placeholder="First Name" formControlName="whitepaperFullName">
+  </div>
+  <div class="form-group">
+    <label for="whitepaperEmailAddress">Email Address *</label>
+    <input type="email" class="form-control" id="whitepaperEmailAddress" placeholder="Email Address" formControlName="whitepaperEmailAddress">
+  </div>
+  <button type="submit" class="schedule-consultation-button p-2">Submit</button>
+</form>

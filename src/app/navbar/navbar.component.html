@@ -8,12 +8,14 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active navbar-link-item">
-        <a class="nav-link navbar-link-item" href="#">Who We Are
+        <!-- <a class="nav-link navbar-link-item" href="#">Who We Are
           <span class="sr-only">(current)</span>
-        </a>
+        </a> -->
+        <div class="nav-link navbar-link-item" (click)="scrollToPageSection('who-we-are')">Who We Are</div>
       </li>
       <li class="nav-item navbar-link-item">
-        <a class="nav-link navbar-link-item" href="#">What We Do</a>
+        <!-- <a class="nav-link navbar-link-item" href="#">What We Do</a> -->
+        <div class="nav-link navbar-link-item" (click)="scrollToPageSection('how-we-help')">How We Help</div>
       </li>
       <!-- <li class="nav-item dropdown">
         <a class="nav-link navbar-link-item dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -28,12 +30,9 @@
         </div>
       </li> -->
       <li class="nav-item navbar-link-item">
-        <a class="nav-link navbar-link-item" href="#">Work With Us</a>
-        <!-- <div class="nav-link navbar-link-item" (click)="workWithUsModal.open()">Work With Us</div> -->
+        <!-- <a class="nav-link navbar-link-item" href="#">Work With Us</a> -->
+        <div class="nav-link navbar-link-item" (click)="scrollToPageSection('how-it-works')">How It Works</div>
       </li>
     </ul>
   </div>
 </nav>
-<!-- <ngx-smart-modal #workWithUsModal identifier="workWithUsModal">
-  <aqueduct-consultation-form></aqueduct-consultation-form>
-</ngx-smart-modal> -->

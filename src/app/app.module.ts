@@ -23,6 +23,8 @@ import { ScrollService } from './services/scroll.service';
 import { DomService } from './services/dom.service';
 import { ModalService } from './services/modal.service';
 import { ConsultationService } from './services/consultation.service';
+import { WhitepaperService } from './services/whitepaper.service';
+import { SharingService } from './services/sharing.service';
 
 // Components
 import { HomeComponent } from './home';
@@ -32,6 +34,8 @@ import { XLargeDirective } from './home/x-large';
 import { DevModuleModule } from './+dev-module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ConsultationComponent } from './consultation/consultation.component';
+import { WhitepaperComponent } from './whitepaper/whitepaper.component';
+import { FooterComponent } from './footer/footer.component';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
@@ -61,6 +65,8 @@ interface StoreType {
     XLargeDirective,
     NavbarComponent,
     ConsultationComponent,
+    WhitepaperComponent,
+    FooterComponent
   ],
   /**
    * Import Angular's modules.
@@ -95,7 +101,9 @@ interface StoreType {
     ScrollService,
     DomService,
     ModalService,
-    ConsultationService
+    ConsultationService,
+    WhitepaperService,
+    SharingService
   ],
 })
 export class AppModule {}

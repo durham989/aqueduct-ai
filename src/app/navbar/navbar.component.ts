@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { AppState } from '../app.service';
 import { XLargeDirective } from './x-large';
 
+import { SharingService } from '../services/sharing.service';
+import { NgxSmartModalService } from 'ngx-smart-modal';
+
 @Component({
   selector: 'aqueduct-navbar',
   templateUrl: './navbar.component.html',
@@ -10,9 +13,12 @@ import { XLargeDirective } from './x-large';
 })
 export class NavbarComponent implements OnInit {
   public localState = { value: '' };
+  public modalName: any;
   
   constructor(
     public appState: AppState,
+    private sharingService: SharingService,
+    public ngxSmartModalService: NgxSmartModalService
   ) {}
 
   public ngOnInit() {
@@ -23,5 +29,14 @@ export class NavbarComponent implements OnInit {
     console.log('submitState', value);
     this.appState.set('value', value);
     this.localState.value = '';
+  }
+
+  scrollToPageSection(destination) {
+    this.sharingService.changeScrollDestination(destination);
+  }
+
+  openModalType(modalType) {
+    this.modalName = modalType;
+    this.sharingService.changeModalType(modalType);
   }
 }

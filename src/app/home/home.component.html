@@ -241,19 +241,47 @@
     </div>
     <div class="row py-5">
       <div class="col-sm-12 col-md-12 col-lg-4 text-align-center py-3">
-        <img *ngIf="!stepOneFlipped" src="../../assets/img/step_1.png" class="step-card-responsive" (click)="flipFirstStep()">
-        <img *ngIf="stepOneFlipped" src="../../assets/img/step_1_details.png" class="step-card-responsive" (click)="flipFirstStep()">
-        <!-- <img *ngIf="!stepOneFlipped" src="../../assets/img/step_1.png" class="step-card-responsive" (click)="flipFirstStep()" [@flipState]="flip">
-        <img *ngIf="stepOneFlipped" src="../../assets/img/step_1_details.png" class="step-card-responsive" (click)="flipFirstStep()" [@flipState]="flip"> -->
+        <img *ngIf="!stepOneFlipped" [class.flip-out-ver-left]="stepOneFlipped" [class.flip-in-ver-right]="!stepOneFlipped" src="../../assets/img/step_1.png" class="step-card-responsive" (click)="flipFirstStep()">
+        <img *ngIf="stepOneFlipped" [class.flip-out-ver-left]="!stepOneFlipped" [class.flip-in-ver-right]="stepOneFlipped" src="../../assets/img/step_1_details.png" class="step-card-responsive" (click)="flipFirstStep()">
       </div>
       <div class="col-sm-12 col-md-12 col-lg-4 text-align-center py-3">
-        <img *ngIf="!stepTwoFlipped" src="../../assets/img/step_2.png" class="step-card-responsive" (click)="flipSecondStep()">
-        <img *ngIf="stepTwoFlipped" src="../../assets/img/step_2_details.png" class="step-card-responsive" (click)="flipSecondStep()">
+        <img *ngIf="!stepTwoFlipped" [class.flip-out-ver-left]="stepTwoFlipped" [class.flip-in-ver-right]="!stepTwoFlipped" src="../../assets/img/step_2.png" class="step-card-responsive" (click)="flipSecondStep()">
+        <img *ngIf="stepTwoFlipped" [class.flip-out-ver-left]="!stepTwoFlipped" [class.flip-in-ver-right]="stepTwoFlipped" src="../../assets/img/step_2_details.png" class="step-card-responsive" (click)="flipSecondStep()">
       </div>
       <div class="col-sm-12 col-md-12 col-lg-4 text-align-center pt-3">
-        <img *ngIf="!stepThreeFlipped" src="../../assets/img/step_3.png" class="step-card-responsive" (click)="flipThirdStep()">
-        <img *ngIf="stepThreeFlipped" src="../../assets/img/step_3_details.png" class="step-card-responsive" (click)="flipThirdStep()">
+        <img *ngIf="!stepThreeFlipped" [class.flip-out-ver-left]="stepThreeFlipped" [class.flip-in-ver-right]="!stepThreeFlipped" src="../../assets/img/step_3.png" class="step-card-responsive" (click)="flipThirdStep()">
+        <img *ngIf="stepThreeFlipped" [class.flip-out-ver-left]="!stepThreeFlipped" [class.flip-in-ver-right]="stepThreeFlipped" src="../../assets/img/step_3_details.png" class="step-card-responsive" (click)="flipThirdStep()">
       </div>
+      <!-- <div class="col-sm-12 col-md-12 col-lg-4 text-align-center py-3">
+        <div class="click panel" [class.flip]="stepOneFlipped" (click)="flipFirstStep()">
+          <div class="front" (click)="flipFirstStep()">
+            <img src="../../assets/img/step_1.png" class="step-card-responsive" (click)="flipFirstStep()">
+          </div>
+          <div class="back" (click)="flipFirstStep()">
+            <img src="../../assets/img/step_1_details.png" class="step-card-responsive" (click)="flipFirstStep()">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-4 text-align-center py-3">
+        <div class="click panel" [class.flip]="stepTwoFlipped" (click)="flipSecondStep()">
+          <div class="front" (click)="flipSecondStep()">
+            <img src="../../assets/img/step_2.png" class="step-card-responsive" (click)="flipSecondStep()">
+          </div>
+          <div class="back" (click)="flipSecondStep()">
+            <img src="../../assets/img/step_2_details.png" class="step-card-responsive" (click)="flipSecondStep()">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-4 text-align-center py-3">
+        <div class="click panel" [class.flip]="stepThreeFlipped" (click)="flipThirdStep()">
+          <div class="front" (click)="flipThirdStep()">
+            <img src="../../assets/img/step_3.png" class="step-card-responsive" (click)="flipThirdStep()">
+          </div>
+          <div class="back" (click)="flipThirdStep()">
+            <img src="../../assets/img/step_3_details.png" class="step-card-responsive" (click)="flipThirdStep()">
+          </div>
+        </div>
+      </div> -->
     </div>
     <div class="row py-5">
       <div class="col-lg-4"></div>

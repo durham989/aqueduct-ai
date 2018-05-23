@@ -40,6 +40,7 @@ export class HomeComponent implements OnInit {
   public modalName: any;
   public scrollDestination: any;
   public emittedModalName: any;
+  public flipped: Boolean = false;
 
   constructor(
     public appState: AppState,
@@ -73,7 +74,7 @@ export class HomeComponent implements OnInit {
 
   flipFirstStep() {
     this.stepOneFlipped = !this.stepOneFlipped;
-    this.flip = (this.flip == 'inactive') ? 'active' : 'inactive';
+    // this.flip = (this.flip == 'inactive') ? 'active' : 'inactive';
   }
 
   flipSecondStep() {
@@ -82,6 +83,10 @@ export class HomeComponent implements OnInit {
 
   flipThirdStep() {
     this.stepThreeFlipped = !this.stepThreeFlipped;
+  }
+
+  flipImage() {
+    this.flipped = !this.flipped;
   }
 
   openModalType(modalType) {

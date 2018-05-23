@@ -21,6 +21,14 @@
   color: #8E9C8F;
 }
 
+.header-alignment {
+  text-align: left;
+}
+
+.cta-alignment {
+  text-align: left;
+}
+
 .white-background {
   background-color: #FFFFFF;
 }
@@ -248,5 +256,13 @@
 @media (max-width: 575.98px) { 
   .header-headline {
     font-size: 48px;
+  }
+
+  .header-alignment {
+    text-align: center;
+  }
+
+  .cta-alignment {
+    text-align: center;
   }
  }

@@ -1,6 +1,6 @@
 {
   "name": "aqueduct.ai",
-  "version": "7.5.0",
+  "version": "1.0.0",
   "description": "Aqueduct.ai uses machine learning to help Public Water Systems to find non-revenue water leaks faster and determine the likelihood of asset failure, helping water utilities save money and reduce risks.",
   "keywords": [
     "angular",
@@ -187,10 +187,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gdi2290/angular-starter.git"
-  },
-  "bugs": {
-    "url": "https://github.com/gdi2290/angular-starter/issues"
+    "url": "https://github.com/durham989/aqueduct-ai.git"
   },
   "engines": {
     "node": ">= 8.0.0",

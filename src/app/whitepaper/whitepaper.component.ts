@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 
 import { WhitepaperService } from '../services/whitepaper.service';
 import { NgxSmartModalService } from 'ngx-smart-modal';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'aqueduct-whitepaper-form',
@@ -16,7 +17,8 @@ export class WhitepaperComponent {
 
   constructor(private formBuilder: FormBuilder,
     private whitepaperService: WhitepaperService,
-    public ngxSmartModalService: NgxSmartModalService ) {
+    public ngxSmartModalService: NgxSmartModalService,
+    public toastrService: ToastrService) {
     this.buildWhitepaperForm();
   }
 
@@ -35,12 +37,33 @@ export class WhitepaperComponent {
     this.whitepaperService.sendWhitepaperNotification(this.whitepaperForm.value).subscribe(
       data => {
         console.log('Submission successful. Data is: ' + JSON.stringify(data));
+        this.displaySuccessNotification("Check your email for your copy of our whitepaper!");
         this.ngxSmartModalService.close('consultationModal');
       },
       error => {
         console.error(error);
+        this.displayErrorNotification("Looks like something went wrong. Try again or reach out to us at info@aqueduct.ai");
+        this.ngxSmartModalService.close('consultationModal');
         return Observable.throw(error);
       }
     );
+  }
+
+  displaySuccessNotification(successMessage) {
+    this.toastrService.success('', successMessage, {
+      timeOut: 8000,
+      closeButton: true,
+      positionClass: 'toast-top-full-width',
+      tapToDismiss: true
+    });
+  }
+
+  displayErrorNotification(errorMessage) {
+    this.toastrService.success('', errorMessage, {
+      timeOut: 8000,
+      closeButton: true,
+      positionClass: 'toast-top-full-width',
+      tapToDismiss: true
+    });
   }
 }

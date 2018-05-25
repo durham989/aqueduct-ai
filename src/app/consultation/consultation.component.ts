@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 
 import { ConsultationService } from '../services/consultation.service';
 import { NgxSmartModalService } from 'ngx-smart-modal';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'aqueduct-consultation-form',
@@ -16,7 +17,8 @@ export class ConsultationComponent {
 
   constructor(private formBuilder: FormBuilder,
     private consultationService: ConsultationService,
-    public ngxSmartModalService: NgxSmartModalService ) {
+    public ngxSmartModalService: NgxSmartModalService,
+    private toastrService: ToastrService) {
     this.buildConsultationForm();
   }
 
@@ -38,12 +40,33 @@ export class ConsultationComponent {
     this.consultationService.sendConsultationNotification(this.consultationForm.value).subscribe(
       data => {
         console.log('Submission successful. Data is: ' + JSON.stringify(data));
+        this.displaySuccessNotification("We'll email you soon to schedule your consultation!");
         this.ngxSmartModalService.close('consultationModal');
       },
       error => {
         console.error(error);
+        this.displayErrorNotification("Looks like something went wrong. Try again or reach out to us at info@aqueduct.ai");
+        this.ngxSmartModalService.close('consultationModal');
         return Observable.throw(error);
       }
     );
+  }
+
+  displaySuccessNotification(successMessage) {
+    this.toastrService.success('', successMessage, {
+      timeOut: 8000,
+      closeButton: true,
+      positionClass: 'toast-top-full-width',
+      tapToDismiss: true
+    });
+  }
+
+  displayErrorNotification(errorMessage) {
+    this.toastrService.success('', errorMessage, {
+      timeOut: 8000,
+      closeButton: true,
+      positionClass: 'toast-top-full-width',
+      tapToDismiss: true
+    });
   }
 }

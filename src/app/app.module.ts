@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { NgxSmartModalModule } from 'ngx-smart-modal';
+import { ToastrModule } from 'ngx-toastr';
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -84,6 +85,7 @@ interface StoreType {
     AngularFontAwesomeModule,
     ScrollToModule.forRoot(),
     NgxSmartModalModule.forRoot(),
+    ToastrModule.forRoot(),
 
     /**
      * This section will import the `DevModuleModule` only in certain build types.

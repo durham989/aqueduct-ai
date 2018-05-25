@@ -265,4 +265,22 @@
   .cta-alignment {
     text-align: center;
   }
+
+  .see-how-button {
+    color: #FFFFFF;
+    font-size: 24px;
+    text-transform: uppercase;
+    border: 2px solid #A4BDBF;
+    background-color: #A4BDBF;
+    -webkit-font-smoothing: subpixel-antialiased;
+    cursor: pointer;
+    letter-spacing: 2px;
+  }
+  
+  .see-how-button:hover {
+    /* color: #FFFFFF;
+    background-color: #A4BDBF; */
+    color: #A4BDBF;
+    background-color: transparent;
+  }
  }

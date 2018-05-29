@@ -41,6 +41,7 @@ export class HomeComponent implements OnInit {
   public scrollDestination: any;
   public emittedModalName: any;
   public flipped: Boolean = false;
+  public statFlipped: Boolean = false;
 
   constructor(
     public appState: AppState,
@@ -87,6 +88,10 @@ export class HomeComponent implements OnInit {
 
   flipImage() {
     this.flipped = !this.flipped;
+  }
+
+  flipStat() {
+    this.statFlipped = !this.statFlipped;
   }
 
   openModalType(modalType) {

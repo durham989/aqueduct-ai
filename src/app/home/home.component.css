@@ -58,6 +58,7 @@
 .leak-stat {
   max-width: 50%;
   height: auto;
+  cursor: pointer;
 }
 
 .how-we-help-header {

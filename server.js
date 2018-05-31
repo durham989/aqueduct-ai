@@ -18,15 +18,49 @@ var connection = mysql.createConnection({
   database: process.env.DB_DATABASE
 });
 
-connection.connect();
-connection.on('error', function (err) {
-  console.log(err.code); // 'ER_BAD_DB_ERROR'
-  if(!err.fatal) {
-    return;
-  } else {
-    connection.connect();
-  }
-});
+function startConnection() {
+  console.log('CONNECTING');
+  var connection = mysql.createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE
+  });
+  connection.connect(function(err) {
+    if (err) {
+      console.error('CONNECT FAILED', err.code);
+      startConnection();
+    }
+    else {
+      console.log('CONNECTED');
+    }
+  });
+  connection.on('error', function(err) {
+    if (err.fatal) {
+      startConnection();
+    }
+  });
+}
+
+startConnection();
+
+// var connectionPool = mysql.createPool({
+//   connectionLimit: 10,
+//   host: process.env.DB_HOST,
+//   user: process.env.DB_USERNAME,
+//   password: process.env.DB_PASSWORD,
+//   database: process.env.DB_DATABASE
+// });
+
+// connection.connect();
+// connection.on('error', function (err) {
+//   console.log(err.code); // 'ER_BAD_DB_ERROR'
+//   if(!err.fatal) {
+//     return;
+//   } else {
+//     connection.connect();
+//   }
+// });
 
 
 var app = express();

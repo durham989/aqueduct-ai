@@ -59,7 +59,7 @@ export class WhitepaperComponent {
   }
 
   displayErrorNotification(errorMessage) {
-    this.toastrService.success('', errorMessage, {
+    this.toastrService.error('', errorMessage, {
       timeOut: 8000,
       closeButton: true,
       positionClass: 'toast-top-full-width',

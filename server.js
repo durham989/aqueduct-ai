@@ -64,8 +64,8 @@ app.route('/consultation').post((req, res) => {
   };
 
   const msg = {
-    // to: ['ethan@kasuriagroup.com', 'jeff@kasuriagroup.com'],
-    to: 'ethan@kasuriagroup.com',
+    to: ['ethan@kasuriagroup.com', 'jeff@kasuriagroup.com'],
+    // to: 'ethan@kasuriagroup.com',
     from: 'info@aqueduct.ai',
     subject: 'Aqueduct Consultation Submission',
     html: `<p>The following individual just submitted a consultation form on Aqueduct.ai:</p><p><ul><li>First Name: ${leadFirstName}</li><li>Last Name: ${leadLastName}</li><li>Email Address: ${leadEmailAddress}</li><li>Org Name: ${leadOrgName}</li></ul></p><p>Follow up with them ASAP!</p>`
@@ -105,8 +105,8 @@ app.route('/whitepaper').post((req, res) => {
 
   const emails = [
     {
-      // to: ['ethan@kasuriagroup.com', 'jeff@kasuriagroup.com'],
-      to: 'ethan@kasuriagroup.com',
+      to: ['ethan@kasuriagroup.com', 'jeff@kasuriagroup.com'],
+      // to: 'ethan@kasuriagroup.com',
       from: 'info@aqueduct.ai',
       subject: 'Aqueduct Whitepaper Download',
       html: `<p>The following individual just downloaded the 'Water Utilities and Machine Learning' whitepaper on Aqueduct.ai:</p><p><ul><li>Full Name: ${whitepaperFullName}</li><li>Email Address: ${whitepaperEmailAddress}</li></ul></p><p>Follow up with them ASAP!</p>`

@@ -12,7 +12,7 @@
       <div class="col-lg-3"></div>
       <div class="col-sm-12 col-md-12 col-lg-6">
         <p class="header-paragraph">
-          We use machine learning to help Public Water Systems increase their resiliency and save resources.
+          Aqueduct uses machine learning to help water utilities improve the performance and reduce the energy consumption of their pump systems.
         </p>
       </div>
       <div class="col-lg-3"></div>
@@ -47,9 +47,13 @@
           of humanity. In order to accomplish this, we're starting with water.
         </p>
         <p class="who-we-are-paragraph pt-4">
-          The stability of our communities and industries around the world are dependent on a continuous supply of potable water to
-          their residential, commercial, and agricultural zones. Aqueduct strives to help municipalities and water utilities
-          intelligently reduce non-revenue water loss.
+          Our society is built on top of a vast amount of infrastructure that serves our drinking and wastewater needs. And yet today, this infrastructure is crumbling - the Army Corps of Engineers gave American water infrastructure straight D’s.
+        </p>
+        <p class="who-we-are-paragraph pt-4">
+          Climate change is already a reality that threatens our water supply. Now is the time to integrate machine learning intelligence into our water infrastructure and increase the resiliency of our communities.
+        </p>
+        <p class="who-we-are-paragraph pt-4">
+          Water pumps are an essential part of water distribution and wastewater infrastructure. We’re using machine learning and predictive analytics to help you improve the performance of and spot problems with your pumps faster.
         </p>
         <div class="learn-more-action cta-alignment pt-4" [ngx-scroll-to]="'#how-we-help'">
           Learn More
@@ -62,8 +66,10 @@
       </div>
       <div class="col-lg-5 order-2 order-md-12 text-align-center py-5">
         <!-- <img src="../../assets/img/aqueduct_stat_10.png" class="leak-stat float-md-right"> -->
-        <img *ngIf="!statFlipped" [class.flip-out-ver-left]="statFlipped" [class.flip-in-ver-right]="!statFlipped" src="../../assets/img/aqueduct_stat_10.png" class="leak-stat float-md-right" (click)="flipStat()">
-        <img *ngIf="statFlipped" [class.flip-out-ver-left]="!statFlipped" [class.flip-in-ver-right]="statFlipped" src="../../assets/img/stat_source.png" class="leak-stat float-md-right" (click)="flipStat()">
+        <img *ngIf="!statFlipped" [class.flip-out-ver-left]="statFlipped" [class.flip-in-ver-right]="!statFlipped" src="../../assets/img/aqueduct_stat_10.png"
+          class="leak-stat float-md-right" (click)="flipStat()">
+        <img *ngIf="statFlipped" [class.flip-out-ver-left]="!statFlipped" [class.flip-in-ver-right]="statFlipped" src="../../assets/img/stat_source.png"
+          class="leak-stat float-md-right" (click)="flipStat()">
       </div>
     </div>
   </div>
@@ -109,8 +115,7 @@
           Know Your Infrastructure
         </h1>
         <p class="who-we-are-paragraph pt-2">
-          Aqueduct analyzes a huge number of variables from both your available repositories and other applicable datasets and helps
-          predict location of leaks, likelihood of asset failure, and more.
+          Aqueduct processes the historical datasets captured from SCADA sensors for your pumps and helps detect anomalistic behavior, predict asset breakdown, and more.
         </p>
       </div>
       <div class="col-sm-12 col-md-12 col-lg-4 text-align-center order-1 order-md-2">
@@ -179,8 +184,7 @@
           Control Your Risks
         </h1>
         <p class="who-we-are-paragraph pt-2">
-          We help you make more informed decisions. With the power of better, more accurate analytics, you'll have a greater ability
-          to manage the risks facing your entire public water system.
+          Aqueduct consumes live data on your pumps, and if it detects a problem, your engineers will receive real time alerts and help them decide to take action or not.
         </p>
       </div>
       <div class="col-sm-12 col-md-12 col-lg-4 pt-4 order-6 order-md-4">
@@ -194,7 +198,7 @@
           Positive Bottom-Line Results
         </h1>
         <p class="who-we-are-paragraph pt-2">
-          Assess the health and improve the operational efficiency of your assets through a strengthened business intelligence.
+          With better intelligence of your assets, you can make better decisions about investing in new pumps, or deferring investment for healthy infrastructure.
         </p>
       </div>
       <div class="col-sm-12 col-md-12 col-lg-4 pt-4 order-5 order-md-6"></div>
@@ -243,16 +247,22 @@
     </div>
     <div class="row py-5">
       <div class="col-sm-12 col-md-12 col-lg-4 text-align-center py-3">
-        <img *ngIf="!stepOneFlipped" [class.flip-out-ver-left]="stepOneFlipped" [class.flip-in-ver-right]="!stepOneFlipped" src="../../assets/img/step_1.png" class="step-card-responsive" (click)="flipFirstStep()">
-        <img *ngIf="stepOneFlipped" [class.flip-out-ver-left]="!stepOneFlipped" [class.flip-in-ver-right]="stepOneFlipped" src="../../assets/img/step_1_details.png" class="step-card-responsive" (click)="flipFirstStep()">
+        <img *ngIf="!stepOneFlipped" [class.flip-out-ver-left]="stepOneFlipped" [class.flip-in-ver-right]="!stepOneFlipped" src="../../assets/img/step_1.png"
+          class="step-card-responsive" (click)="flipFirstStep()">
+        <img *ngIf="stepOneFlipped" [class.flip-out-ver-left]="!stepOneFlipped" [class.flip-in-ver-right]="stepOneFlipped" src="../../assets/img/step_1_details.png"
+          class="step-card-responsive" (click)="flipFirstStep()">
       </div>
       <div class="col-sm-12 col-md-12 col-lg-4 text-align-center py-3">
-        <img *ngIf="!stepTwoFlipped" [class.flip-out-ver-left]="stepTwoFlipped" [class.flip-in-ver-right]="!stepTwoFlipped" src="../../assets/img/step_2.png" class="step-card-responsive" (click)="flipSecondStep()">
-        <img *ngIf="stepTwoFlipped" [class.flip-out-ver-left]="!stepTwoFlipped" [class.flip-in-ver-right]="stepTwoFlipped" src="../../assets/img/step_2_details.png" class="step-card-responsive" (click)="flipSecondStep()">
+        <img *ngIf="!stepTwoFlipped" [class.flip-out-ver-left]="stepTwoFlipped" [class.flip-in-ver-right]="!stepTwoFlipped" src="../../assets/img/step_2.png"
+          class="step-card-responsive" (click)="flipSecondStep()">
+        <img *ngIf="stepTwoFlipped" [class.flip-out-ver-left]="!stepTwoFlipped" [class.flip-in-ver-right]="stepTwoFlipped" src="../../assets/img/step_2_details.png"
+          class="step-card-responsive" (click)="flipSecondStep()">
       </div>
       <div class="col-sm-12 col-md-12 col-lg-4 text-align-center pt-3">
-        <img *ngIf="!stepThreeFlipped" [class.flip-out-ver-left]="stepThreeFlipped" [class.flip-in-ver-right]="!stepThreeFlipped" src="../../assets/img/step_3.png" class="step-card-responsive" (click)="flipThirdStep()">
-        <img *ngIf="stepThreeFlipped" [class.flip-out-ver-left]="!stepThreeFlipped" [class.flip-in-ver-right]="stepThreeFlipped" src="../../assets/img/step_3_details.png" class="step-card-responsive" (click)="flipThirdStep()">
+        <img *ngIf="!stepThreeFlipped" [class.flip-out-ver-left]="stepThreeFlipped" [class.flip-in-ver-right]="!stepThreeFlipped"
+          src="../../assets/img/step_3.png" class="step-card-responsive" (click)="flipThirdStep()">
+        <img *ngIf="stepThreeFlipped" [class.flip-out-ver-left]="!stepThreeFlipped" [class.flip-in-ver-right]="stepThreeFlipped"
+          src="../../assets/img/step_3_details.png" class="step-card-responsive" (click)="flipThirdStep()">
       </div>
       <!-- <div class="col-sm-12 col-md-12 col-lg-4 text-align-center py-3">
         <div class="click panel" [class.flip]="stepOneFlipped" (click)="flipFirstStep()">

@@ -12,5 +12,19 @@ export class ConsultationService {
     });
     return this.http.post('/consultation', consultationForm, {headers: apiHeaders});
   }
+
+  scheduleConsultationLandingPage(consultationForm) {
+    const apiHeaders = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    return this.http.post('consultation/water-utility', consultationForm, { headers: apiHeaders });
+  }
+
+  scheduleConsultationWastewaterLandingPage(consultationForm) {
+    const apiHeaders = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    return this.http.post('consultation/wastewater-facility', consultationForm, { headers: apiHeaders });
+  }
   
 }

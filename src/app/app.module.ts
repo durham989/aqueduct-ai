@@ -8,6 +8,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { NgxSmartModalModule } from 'ngx-smart-modal';
 import { ToastrModule } from 'ngx-toastr';
+import { ShareModule } from '@ngx-share/core';
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -26,6 +27,7 @@ import { ModalService } from './services/modal.service';
 import { ConsultationService } from './services/consultation.service';
 import { WhitepaperService } from './services/whitepaper.service';
 import { SharingService } from './services/sharing.service';
+import { BlogService } from './services/blog.service';
 
 // Components
 import { HomeComponent } from './home';
@@ -37,6 +39,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ConsultationComponent } from './consultation/consultation.component';
 import { WhitepaperComponent } from './whitepaper/whitepaper.component';
 import { FooterComponent } from './footer/footer.component';
+import { BlogComponent } from './blog/blog.component';
+import { IndividualBlogComponent } from './blog/individual-blog.component';
+import { WaterUtilityComponent } from './landing-pages/water-utility.component';
+import { WastewaterFacilityComponent } from './landing-pages/wastewater-facility.component';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
@@ -67,7 +73,11 @@ interface StoreType {
     NavbarComponent,
     ConsultationComponent,
     WhitepaperComponent,
-    FooterComponent
+    FooterComponent,
+    BlogComponent,
+    IndividualBlogComponent,
+    WaterUtilityComponent,
+    WastewaterFacilityComponent,
   ],
   /**
    * Import Angular's modules.
@@ -86,6 +96,7 @@ interface StoreType {
     ScrollToModule.forRoot(),
     NgxSmartModalModule.forRoot(),
     ToastrModule.forRoot(),
+    ShareModule.forRoot(),
 
     /**
      * This section will import the `DevModuleModule` only in certain build types.
@@ -105,7 +116,8 @@ interface StoreType {
     ModalService,
     ConsultationService,
     WhitepaperService,
-    SharingService
+    SharingService,
+    BlogService,
   ],
 })
 export class AppModule {}

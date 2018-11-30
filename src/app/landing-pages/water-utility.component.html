@@ -1,0 +1,111 @@
+<div id="particles-js-5"></div>
+<nav class="navbar navbar-expand-lg navbar-light transparent-background">
+  <a class="navbar-brand aqueduct-branding" style="cursor: default;">
+    <img class="aqueduct-logo" src="../../assets/img/Aqueduct_Logo_Flipped_Fill.png"> Aqueduct
+  </a>
+</nav>
+
+<div class="container">
+  <div class="row align-items-center align-content-center py-3">
+    <div class="col-sm-12 col-md-12 col-lg-8 py-3">
+      <h1 class="header-headline py-2">Machine Learning to Increase the Resiliency of Your Water Utility</h1>
+      <h5 class="aqueduct-primary-color py-2">Learn How Machine Learning Can Benefit Your Water Utility.</h5>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-4 py-3">
+      <div class="card p-3">
+        <div class="card-title text-align-center">
+          <h5 class="pt-3 px-3 aqueduct-secondary-color">Schedule a Consultation Today</h5>
+        </div>
+        <form class="p-3" [formGroup]="waterUtilityForm">
+          <div class="form-group">
+            <label class="aqueduct-secondary-color" for="name">Name *</label>
+            <input type="text" class="form-control" id="name" formControlName="name" placeholder="Full Name">
+          </div>
+          <div class="form-group">
+            <label class="aqueduct-secondary-color" for="organization">Organization *</label>
+            <input type="text" class="form-control" id="organization" formControlName="organizationName" placeholder="Organization Name">
+          </div>
+          <div class="form-group">
+            <label class="aqueduct-secondary-color" for="businessGoal">Business Goal *</label>
+            <select class="form-control" id="businessGoal" formControlName="businessGoal">
+              <option>Save Money</option>
+              <option>Increase Efficiency</option>
+              <option>Improve Water Quality</option>
+              <option>Reduce System Downtime</option>
+              <option>Save Energy</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="aqueduct-secondary-color" for="emailAddress">Email Address *</label>
+            <input type="email" class="form-control" id="emailAddress" formControlName="emailAddress" placeholder="Work Email Address">
+          </div>
+          <div class="form-group">
+            <label class="aqueduct-secondary-color" for="phoneNumber">Phone Number *</label>
+            <input type="tel" class="form-control" id="phoneNumber" formControlName="phoneNumber" placeholder="555-555-5555">
+          </div>
+          <button type="submit" class="btn submit-form-button" (click)="scheduleConsultation()">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row p-3 aqueduct-features-section">
+  <div class="col-sm-12 col-md-12 col-lg-12 text-align-center py-3">
+    <p class="features-header">Aqueduct's Machine Learning Software Can Help You:</p>
+  </div>
+  <div class="col-sm-12 col-md-12 col-lg-4 text-align-center py-3">
+    <div class="py-2">
+      <img src="../../assets/img/Money-Icon_1@3x.png" class="img-fluid">
+    </div>
+    <p class="aqueduct-secondary-color">Save Money and Energy</p>
+    <p class="aqueduct-secondary-color smaller-paragraph-font">Aqueduct's insights drive increased bottom-line performance.</p>
+  </div>
+  <div class="col-sm-12 col-md-12 col-lg-4 text-align-center py-3">
+    <div class="py-2">
+      <img src="../../assets/img/Risk-Icon_1@3x.png" class="img-fluid">
+    </div>
+    <p class="aqueduct-secondary-color">Reduce Risk</p>
+    <p class="aqueduct-secondary-color smaller-paragraph-font">Aqueduct can help you predict and prevent asset breakdown.</p>
+  </div>
+  <div class="col-sm-12 col-md-12 col-lg-4 text-align-center py-3">
+    <div class="py-2">
+      <img src="../../assets/img/Water-Icon@3x.png" class="img-fluid">
+    </div>
+    <p class="aqueduct-secondary-color">Improve Water Quality</p>
+    <p class="aqueduct-secondary-color smaller-paragraph-font">Optimize your chemical additives and product the highest quality water.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row py-3">
+    <div class="col-sm-12 col-md-12 col-lg-12 p-3">
+      <h3 class="aqueduct-primary-color">Our Process</h3>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12 p-3">
+      <div class="dropdown-divider"></div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6 p-3">
+      <ul class="aqueduct-secondary-color">
+        <li>Meet with your team to understand the business context and requirements for the goals you would like to achieve.</li>
+        <li>Identify and isolate the most important variables and standardize the datasets in a readable format for our models.</li>
+        <li>Evaluate each model based on relevant performance metrics and subsequently tune the model in order to achieve the best results with the highest confidence.</li>
+        <li>Make predictions on live data regarding how to best optimize inputs for the most favorable outcomes, easily accessible through our customer dashboard.</li>
+      </ul>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6 p-3">
+      <img src="../../assets/img/Aqueduct_Dashboard.png" class="img-fluid">
+    </div>
+  </div>
+</div>
+
+<div class="row align-items-center align-content-center landing-footer-background p-3">
+  <div class="col-lg-1"></div>
+  <div class="col-sm-12 col-md-6 col-lg-8 py-3">
+    <p style="color: #FFFFFF;">Aqueduct strives to strengthen water infrastructure around the globe in order to make the world work for 100% of humanity.</p>
+    <p style="color: #FFFFFF;">We believe that resilient water infrastructure represents a resilient society.</p>
+  </div>
+  <div class="col-sm-12 col-md-6 col-lg-3 py-3 text-align-center">
+    <img src="../../assets/img/Aqueduct_White_Icon@2x.png" class="img-fluid">
+  </div>
+</div>

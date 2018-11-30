@@ -1,0 +1,68 @@
+.sharing-text {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: .5px;
+  line-height: 1.6em;
+  color: #888888;
+}
+
+.tweet-color {
+  background-color: #1DA1F2;
+  color: #FFFFFF; 
+}
+
+.facebook-color {
+  background-color: #3B5998;
+  color: #FFFFFF;
+}
+
+.blog-post-3-card {
+  background-image: url("../../assets/img/joel-filipe-370539-unsplash.jpg");
+  background-size: cover;
+  box-shadow: 0 1px 0 rgba(0,0,0,.05), 0 2px 6px rgba(0,0,0,.05), 0 10px 20px rgba(0,0,0,.05);
+  color: #FFFFFF;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  min-height: 460px;
+  border-radius: 4px;
+  transition: box-shadow .3s ease;
+}
+
+.blog-post-4-card {
+  background-image: url("../../assets/img/laurent-naville-663413-unsplash.jpg");
+  background-size: cover;
+  box-shadow: 0 1px 0 rgba(0,0,0,.05), 0 2px 6px rgba(0,0,0,.05), 0 10px 20px rgba(0,0,0,.05);
+  color: #FFFFFF;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  min-height: 460px;
+  border-radius: 4px;
+  transition: box-shadow .3s ease;
+}
+
+.blog-post-5-card {
+  background-image: url("../../assets/img/luiz-felipe-souza-596402-unsplash.jpg");
+  background-size: cover;
+  box-shadow: 0 1px 0 rgba(0,0,0,.05), 0 2px 6px rgba(0,0,0,.05), 0 10px 20px rgba(0,0,0,.05);
+  color: #FFFFFF;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  min-height: 460px;
+  border-radius: 4px;
+  transition: box-shadow .3s ease;
+}
+
+.read-more {
+  color: rgba(255,255,255,.6);
+  transition: color .2s ease;
+}

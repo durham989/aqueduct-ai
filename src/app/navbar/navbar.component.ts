@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { AppState } from '../app.service';
-import { XLargeDirective } from './x-large';
 
 import { SharingService } from '../services/sharing.service';
 import { NgxSmartModalService } from 'ngx-smart-modal';
@@ -18,7 +18,8 @@ export class NavbarComponent implements OnInit {
   constructor(
     public appState: AppState,
     private sharingService: SharingService,
-    public ngxSmartModalService: NgxSmartModalService
+    public ngxSmartModalService: NgxSmartModalService,
+    private router: Router
   ) {}
 
   public ngOnInit() {
@@ -38,5 +39,14 @@ export class NavbarComponent implements OnInit {
   openModalType(modalType) {
     this.modalName = modalType;
     this.sharingService.changeModalType(modalType);
+  }
+
+  navigateToHomePage(destination) {
+    this.router.navigate(['/home']);
+    this.scrollToPageSection(destination);
+  }
+
+  navigateToBlog() {
+    this.router.navigate(['/blog']);
   }
 }

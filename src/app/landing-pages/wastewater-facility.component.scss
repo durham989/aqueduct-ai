@@ -1,0 +1,131 @@
+.aqueduct-branding {
+  text-transform: uppercase !important;
+  color: #354948 !important;
+  font-size: 36px !important;
+  letter-spacing: 9px !important;
+  padding: 1rem 1rem !important;
+}
+
+.aqueduct-branding:hover {
+	-webkit-animation: text-shadow-drop-center 0.6s both;
+	        animation: text-shadow-drop-center 0.6s both;
+}
+
+.transparent-background {
+  background-color: transparent !important;
+}
+
+.navbar-link-item {
+  text-transform: uppercase !important;
+  color: #A6B5B2 !important;
+  font-size: 20px !important;
+  letter-spacing: 2.4px !important;
+  padding: 1rem 1rem !important;
+  cursor: pointer !important;
+}
+
+.navbar-link-item:hover {
+  cursor: pointer !important;
+	-webkit-animation: text-shadow-drop-center 0.6s both;
+          animation: text-shadow-drop-center 0.6s both;
+}
+
+.aqueduct-logo {
+  max-width: 10%;
+  height: auto;
+}
+
+.aqueduct-secondary-color {
+  color: #354948;
+}
+
+.aqueduct-primary-color {
+  color: #A4BDBF;
+}
+
+.larger-paragraph-font {
+  font-size: 16px;
+}
+
+.smaller-paragraph-font {
+  font-size: 12px;
+}
+
+.header-headline {
+  font-size : 48px;
+  letter-spacing : 3px;
+  color : #A4BDBF;
+  color : rgb(164, 189, 191);
+  cursor: default;
+}
+
+.submit-form-button {
+  color: #A4BDBF;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: 2px solid #A4BDBF;
+  background-color: transparent;
+  -webkit-font-smoothing: subpixel-antialiased;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.submit-form-button:hover {
+  color: #FFFFFF;
+  background-color: #A4BDBF;
+}
+
+.aqueduct-features-section {
+  background-color: #F2F3F2;
+}
+
+.features-header {
+  font-size: 20px;
+  color: #A4BDBF;
+}
+
+.landing-footer-background {
+    background : -moz-linear-gradient(0% 50% 0deg,rgba(164, 189, 191, 1) 0%,rgba(142, 155, 142, 1) 100%);
+    background : -webkit-linear-gradient(0deg, rgba(164, 189, 191, 1) 0%, rgba(142, 155, 142, 1) 100%);
+    background : -webkit-gradient(linear,0% 50% ,100% 50% ,color-stop(0,rgba(164, 189, 191, 1) ),color-stop(1,rgba(142, 155, 142, 1) ));
+    background : -o-linear-gradient(0deg, rgba(164, 189, 191, 1) 0%, rgba(142, 155, 142, 1) 100%);
+    background : -ms-linear-gradient(0deg, rgba(164, 189, 191, 1) 0%, rgba(142, 155, 142, 1) 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#A4BDBF', endColorstr='#8E9B8E' ,GradientType=0)";
+    background : linear-gradient(90deg, rgba(164, 189, 191, 1) 0%, rgba(142, 155, 142, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A4BDBF',endColorstr='#8E9B8E' , GradientType=1);
+}
+
+.features-border {
+  border: 1px solid #A4BDC0;
+}
+
+@-webkit-keyframes text-shadow-drop-center {
+  0% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    text-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
+  }
+}
+@keyframes text-shadow-drop-center {
+  0% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    text-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
+  }
+}
+
+@media (max-width: 575.98px) { 
+  .aqueduct-branding {
+    text-transform: uppercase !important;
+    color: #354948 !important;
+    font-size: 28px !important;
+    letter-spacing: 9px !important;
+    padding: 1rem 1rem !important;
+  }
+
+  .header-headline {
+    font-size: 36px;
+  }
+ }

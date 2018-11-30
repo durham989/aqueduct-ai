@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var mysql = require('mysql');
 var file = require('file-system');
+require('dotenv').config();
 
 // SendGrid setup
 var sgMail = require('@sendgrid/mail');
@@ -98,7 +99,7 @@ app.route('/consultation').post((req, res) => {
   };
 
   const msg = {
-    to: ['ethan@kasuriagroup.com', 'jeff@kasuriagroup.com'],
+    to: ['ethan@aqueduct.ai', 'jeff@aqueduct.ai'],
     // to: 'ethan@kasuriagroup.com',
     from: 'info@aqueduct.ai',
     subject: 'Aqueduct Consultation Submission',
@@ -139,7 +140,7 @@ app.route('/whitepaper').post((req, res) => {
 
   const emails = [
     {
-      to: ['ethan@kasuriagroup.com', 'jeff@kasuriagroup.com'],
+      to: ['ethan@aqueduct.ai', 'jeff@aqueduct.ai'],
       // to: 'ethan@kasuriagroup.com',
       from: 'info@aqueduct.ai',
       subject: 'Aqueduct Whitepaper Download',
@@ -172,6 +173,117 @@ app.route('/whitepaper').post((req, res) => {
       message: 'email sent!'
     }))
     .catch(() => res.status(400).send(err));
+
+});
+
+// Blog Subscription 
+app.route('/subscribe').post(function (req, res) {
+
+  var appData = {
+    "error": 1,
+    "data": ""
+  };
+
+  var userData = {
+    emailAddress: req.body.emailAddress
+  };
+
+  connection.query('INSERT INTO blog_subscribers SET ?', userData, function (err) {
+    if (!err) {
+      appData.error = 0;
+      appData["data"] = "Subscription successful!";
+      res.status(201).json(appData);
+    } else {
+      console.log(err);
+      appData["data"] = "Error Occured!";
+      res.status(400).json(appData);
+    }
+  });
+});
+
+// Water Utility Landing Page Submission
+app.route('/consultation/water-utility').post((req, res) => {
+  const leadName = req.body.name;
+  const leadEmailAddress = req.body.emailAddress;
+  const leadOrgName = req.body.organizationName;
+  const leadBusinessGoal = req.body.businessGoal;
+  const leadPhoneNumber = req.body.phoneNumber;
+  const landingPageName = req.body.landingPageName;
+
+  var CURRENT_TIMESTAMP = { toSqlString: function() { return 'CURRENT_TIMESTAMP()'; } };
+
+  const landingPageDBEntry = {
+    name: leadName,
+    organizationName: leadOrgName,
+    businessGoal: leadBusinessGoal,
+    emailAddress: leadEmailAddress,
+    phoneNumber: leadPhoneNumber,
+    landingPageName: landingPageName,
+    date: CURRENT_TIMESTAMP
+  };
+
+  const msg = {
+    to: ['ethan@aqueduct.ai', 'jeff@aqueduct.ai'],
+    from: 'info@aqueduct.ai',
+    subject: 'Aqueduct Water Utility Landing Page Submission',
+    html: `<p>The following individual just submitted a consultation request on the water utility landing page at Aqueduct.ai:</p><p><ul><li>Name: ${leadName}</li><li>Email Address: ${leadEmailAddress}</li><li>Org Name: ${leadOrgName}</li><li>Business Goal: ${leadBusinessGoal}</li><li>Phone Number: ${leadPhoneNumber}</li></ul></p><p>Follow up with them ASAP!</p>`
+  };
+
+  return sgMail.send(msg)
+
+    .then(() => connection.query('INSERT INTO landing_page SET ?', landingPageDBEntry, function (error, results) {
+      if (error) throw error;
+      if (results) {
+        console.log('results of database entry are: ' + results);
+      }
+    }))
+    .then(() => res.status(200).json({
+      message: 'email sent!'
+    }))
+    .catch(() => res.status(400).send(err))
+
+});
+
+// Water Utility Landing Page Submission
+app.route('/consultation/wastewater-facility').post((req, res) => {
+  const leadName = req.body.name;
+  const leadEmailAddress = req.body.emailAddress;
+  const leadOrgName = req.body.organizationName;
+  const leadBusinessGoal = req.body.businessGoal;
+  const leadPhoneNumber = req.body.phoneNumber;
+  const landingPageName = req.body.landingPageName;
+
+  var CURRENT_TIMESTAMP = { toSqlString: function() { return 'CURRENT_TIMESTAMP()'; } };
+
+  const landingPageDBEntry = {
+    name: leadName,
+    organizationName: leadOrgName,
+    businessGoal: leadBusinessGoal,
+    emailAddress: leadEmailAddress,
+    phoneNumber: leadPhoneNumber,
+    landingPageName: landingPageName,
+    date: CURRENT_TIMESTAMP
+  };
+
+  const msg = {
+    to: ['ethan@aqueduct.ai', 'jeff@aqueduct.ai'],
+    from: 'info@aqueduct.ai',
+    subject: 'Aqueduct Wastewater Facility Landing Page Submission',
+    html: `<p>The following individual just submitted a consultation request on the wastewater facility landing page at Aqueduct.ai:</p><p><ul><li>Name: ${leadName}</li><li>Email Address: ${leadEmailAddress}</li><li>Org Name: ${leadOrgName}</li><li>Business Goal: ${leadBusinessGoal}</li><li>Phone Number: ${leadPhoneNumber}</li></ul></p><p>Follow up with them ASAP!</p>`
+  };
+
+  return sgMail.send(msg)
+
+    .then(() => connection.query('INSERT INTO landing_page SET ?', landingPageDBEntry, function (error, results) {
+      if (error) throw error;
+      if (results) {
+        console.log('results of database entry are: ' + results);
+      }
+    }))
+    .then(() => res.status(200).json({
+      message: 'email sent!'
+    }))
+    .catch(() => res.status(400).send(err))
 
 });
 

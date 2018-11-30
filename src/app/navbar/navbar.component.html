@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light transparent-background">
-  <a class="navbar-brand aqueduct-branding" href="#">Aqueduct</a>
+  <a class="navbar-brand aqueduct-branding" routerLink="/home">Aqueduct</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -8,31 +8,20 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active navbar-link-item">
-        <!-- <a class="nav-link navbar-link-item" href="#">Who We Are
-          <span class="sr-only">(current)</span>
-        </a> -->
-        <div class="nav-link navbar-link-item" (click)="scrollToPageSection('who-we-are')">Our Mission</div>
+        <!-- <div class="nav-link navbar-link-item" (click)="scrollToPageSection('who-we-are')">Our Mission</div> -->
+        <div class="nav-link navbar-link-item" (click)="navigateToHomePage('who-we-are')">Our Mission</div>
       </li>
       <li class="nav-item navbar-link-item">
-        <!-- <a class="nav-link navbar-link-item" href="#">What We Do</a> -->
-        <div class="nav-link navbar-link-item" (click)="scrollToPageSection('how-we-help')">How We Help</div>
+        <!-- <div class="nav-link navbar-link-item" (click)="scrollToPageSection('how-we-help')">How We Help</div> -->
+        <div class="nav-link navbar-link-item" (click)="navigateToHomePage('how-we-help')">How We Help</div>
       </li>
-      <!-- <li class="nav-item dropdown">
-        <a class="nav-link navbar-link-item dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+      <li class="nav-item navbar-link-item">
+        <!-- <div class="nav-link navbar-link-item" (click)="scrollToPageSection('how-it-works')">How It Works</div> -->
+        <div class="nav-link navbar-link-item" (click)="navigateToHomePage('how-it-works')">How It Works</div>
+      </li>
+      <!-- <li class="nav-item navbar-link-item">
+        <div class="nav-link navbar-link-item" (click)="navigateToBlog()">Our Blog</div>
       </li> -->
-      <li class="nav-item navbar-link-item">
-        <!-- <a class="nav-link navbar-link-item" href="#">Work With Us</a> -->
-        <div class="nav-link navbar-link-item" (click)="scrollToPageSection('how-it-works')">How It Works</div>
-      </li>
     </ul>
   </div>
 </nav>

@@ -1,0 +1,69 @@
+<aqueduct-navbar></aqueduct-navbar>
+<div class="container">
+  <div class="row py-3">
+    <div class="col-12 text-center">
+      <h1 class="header-headline">The Aqueduct Blog</h1>
+    </div>
+  </div>
+  <div class="row pt-3">
+    <div class="col-lg-3"></div>
+    <div class="col-sm-12 col-md-12 col-lg-6">
+      <!-- <p class="header-paragraph text-center">
+            Exploring ideas at the intersection of technology, water, and the advancement of humanity. Sign up to access our latest blog posts via email.
+          </p> -->
+      <p class="header-paragraph text-center">
+        Exploring ideas at the intersection of technology, water, and the advancement of humanity.
+      </p>
+    </div>
+    <div class="col-lg-3"></div>
+  </div>
+  <div class="row py-3">
+    <div class="col-lg-4"></div>
+    <div class="col-sm-12 col-md-12 col-lg-4">
+      <form [formGroup]="subscribeForm">
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" placeholder="Your email" aria-label="Your email" aria-describedby="email-addon"
+            formControlName="emailAddress">
+          <div class="input-group-append">
+            <button class="btn subscribe-button" type="button" id="email-addon" (click)="subscribeToBlog()">Subscribe</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+  <div class="row py-3 my-5">
+    <div class="col-sm-12 col-md-12 col-lg-8">
+      <div class="blog-post-1-card cursor-pointer" (click)="navigateToIndividualBlogPost()">
+        <h4 class="py-2">Our Pilot with Fairfield-Suisun</h4>
+        <p class="read-more">Read More</p>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-4">
+      <div class="blog-post-2-card cursor-pointer" (click)="navigateToIndividualBlogPost()">
+        <h4 class="py-2">The Perils of Energy and Water</h4>
+        <p class="read-more">Read More</p>
+      </div>
+    </div>
+  </div>
+  <div class="row py-3 my-5">
+    <div class="col-sm-12 col-md-12 col-lg-4">
+      <div class="blog-post-3-card cursor-pointer" (click)="navigateToIndividualBlogPost()">
+        <h4 class="py-2">Reaching Best Efficiency Points</h4>
+        <p class="read-more">Read More</p>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-4">
+      <div class="blog-post-4-card cursor-pointer" (click)="navigateToIndividualBlogPost()">
+        <h4 class="py-2">Human Health and the Wastewater Connection</h4>
+        <p class="read-more">Read More</p>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-4">
+      <div class="blog-post-5-card cursor-pointer" (click)="navigateToIndividualBlogPost()">
+        <h4 class="py-2">Machine Learning for Clean Water</h4>
+        <p class="read-more">Read More</p>
+      </div>
+    </div>
+  </div>
+</div>

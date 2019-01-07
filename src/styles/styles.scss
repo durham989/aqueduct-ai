@@ -179,3 +179,9 @@ body.dialog-open {
   color: #888888;
   cursor: pointer; 
 }
+
+@media (max-width: 575.98px) { 
+  .header-headline {
+    font-size: 48px;
+  }
+ }

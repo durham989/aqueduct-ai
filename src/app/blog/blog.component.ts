@@ -76,6 +76,10 @@ export class BlogComponent implements OnInit {
     });
   }
 
+  navigateToFirstBlogPost() {
+    this.router.navigate(['/blog/technological-solution-for-aging-water-infrastructure']);
+  }
+  
   navigateToIndividualBlogPost() {
     this.router.navigate(['/blog/blog-post']);
   }

@@ -43,6 +43,7 @@ import { BlogComponent } from './blog/blog.component';
 import { IndividualBlogComponent } from './blog/individual-blog.component';
 import { WaterUtilityComponent } from './landing-pages/water-utility.component';
 import { WastewaterFacilityComponent } from './landing-pages/wastewater-facility.component';
+import { FarmFishBlogPostComponent } from './blog/farm-fish-post.component';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
@@ -78,6 +79,7 @@ interface StoreType {
     IndividualBlogComponent,
     WaterUtilityComponent,
     WastewaterFacilityComponent,
+    FarmFishBlogPostComponent,
   ],
   /**
    * Import Angular's modules.

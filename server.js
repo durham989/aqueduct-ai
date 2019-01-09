@@ -287,6 +287,31 @@ app.route('/consultation/wastewater-facility').post((req, res) => {
 
 });
 
+// Get All Blog Posts
+app.get('/blog/all', function(req, res) {
+  connection.query('SELECT * FROM blog_posts', function(err, result) {
+    if(err) throw err;
+    if (result) {
+      res.status(200).json({
+        result
+      });
+    }
+  });
+});
+
+// Get Individual Blog Post
+app.get('/blog/:id', function(req, res) {
+  var id = req.params.id;
+  connection.query('SELECT * FROM blog_posts WHERE id = ' + id, function(err, result) {
+    if(err) throw err;
+    if (result) {
+      res.status(200).json({
+        result
+      });
+    }
+  });
+});
+
 // Index Route
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));

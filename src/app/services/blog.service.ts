@@ -16,7 +16,7 @@ export class BlogService {
     const apiHeaders = new HttpHeaders({
       'Content-Type': 'application/json',
     });
-    return this.http.get('/blog', {headers: apiHeaders});
+    return this.http.get('/blog/all', {headers: apiHeaders});
   }
 
   getIndividualBlogPost(postId) {

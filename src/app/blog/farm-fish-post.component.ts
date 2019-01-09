@@ -7,17 +7,18 @@ import { AppState } from '../app.service';
 import { BlogService } from '../services/blog.service';
 import { NgxSmartModalService } from 'ngx-smart-modal';
 import { ToastrService } from 'ngx-toastr';
+import { ShareButtons } from '@ngx-share/core';
 
 @Component({
-  selector: 'aqueduct-blog',
-  templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.scss'],
+  selector: 'aqueduct-farm-fish-blog-post',
+  templateUrl: './farm-fish-post.component.html',
+  styleUrls: ['./farm-fish-post.component.scss'],
 })
 
-export class BlogComponent implements OnInit {
+export class FarmFishBlogPostComponent implements OnInit {
   public localState = { value: '' };
   public subscribeForm: FormGroup;
-  public blogPosts: any = [];
+  public shareUrl: any;
 
   constructor(
     public appState: AppState,
@@ -26,11 +27,11 @@ export class BlogComponent implements OnInit {
     private formBuilder: FormBuilder,
     private blogService: BlogService,
     private toastrService: ToastrService,
-    
+    public share: ShareButtons,
   ) { this.buildForms(); }
 
   ngOnInit() {
-    // this.getBlogPosts();
+    // this.submitState('blog');
   }
 
   public submitState(value: string) {
@@ -43,19 +44,6 @@ export class BlogComponent implements OnInit {
     this.subscribeForm = this.formBuilder.group({
       emailAddress: [null, Validators.required]
     });
-  }
-
-  getBlogPosts() {
-    this.blogService.getBlogPosts().subscribe(
-      data => {
-        this.blogPosts = data["result"];
-        console.log('blogPosts: ' + JSON.stringify(this.blogPosts));
-      }, 
-      error => {
-        console.error(error);
-        return Observable.throw(error);
-      }
-    );
   }
 
   subscribeToBlog() {
@@ -74,7 +62,7 @@ export class BlogComponent implements OnInit {
 
   displaySuccessNotification(successMessage) {
     this.toastrService.success('', successMessage, {
-      timeOut: 3000,
+      timeOut: 5000,
       closeButton: true,
       positionClass: 'toast-top-full-width',
       tapToDismiss: true
@@ -83,21 +71,13 @@ export class BlogComponent implements OnInit {
 
   displayErrorNotification(errorMessage) {
     this.toastrService.error('', errorMessage, {
-      timeOut: 3000,
+      timeOut: 5000,
       closeButton: true,
       positionClass: 'toast-top-full-width',
       tapToDismiss: true
     });
   }
 
-  navigateToFirstBlogPost() {
-    this.router.navigate(['/blog/technological-solution-for-aging-water-infrastructure']);
-  }
-
-  navigateToSecondBlogPost() {
-    this.router.navigate(['/blog/farmer-vs-fish-water-crisis-in-california']);
-  }
-  
   navigateToIndividualBlogPost() {
     this.router.navigate(['/blog/blog-post']);
   }

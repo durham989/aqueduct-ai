@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, style, transition, animate, keyframes, query, stagger, state } from '@angular/animations';
+import { Router } from '@angular/router';
 
 import { AppState } from '../app.service';
 import { Title } from './title';
@@ -48,7 +49,8 @@ export class HomeComponent implements OnInit {
     public title: Title,
     public ngxSmartModalService: NgxSmartModalService,
     private sharingService: SharingService,
-    private scrollService: ScrollService
+    private scrollService: ScrollService,
+    private router: Router
   ) { }
 
   public ngOnInit() {
@@ -98,5 +100,9 @@ export class HomeComponent implements OnInit {
     this.modalName = modalType;
     // this.ngxSmartModalService.open(modalType);
     this.ngxSmartModalService.open('consultationModal');
+  }
+
+  navigateToOurProcess() {
+    this.router.navigate(['/our-process']);
   }
 }

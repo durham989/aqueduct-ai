@@ -180,8 +180,16 @@ body.dialog-open {
   cursor: pointer; 
 }
 
+.mobile-alignment {
+  text-align: left;
+}
+
 @media (max-width: 575.98px) { 
   .header-headline {
     font-size: 48px;
+  }
+
+  .mobile-alignment {
+    text-align: center;
   }
  }

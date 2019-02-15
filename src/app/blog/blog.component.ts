@@ -48,8 +48,7 @@ export class BlogComponent implements OnInit {
   getBlogPosts() {
     this.blogService.getBlogPosts().subscribe(
       data => {
-        this.blogPosts = data["result"];
-        console.log('blogPosts: ' + JSON.stringify(this.blogPosts));
+        this.blogPosts = data["data"];
       }, 
       error => {
         console.error(error);

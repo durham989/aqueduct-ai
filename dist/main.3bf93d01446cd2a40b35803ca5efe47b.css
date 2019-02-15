@@ -7155,8 +7155,13 @@ body.dialog-open {
   color: #888888;
   cursor: pointer; }
 
+.mobile-alignment {
+  text-align: left; }
+
 @media (max-width: 575.98px) {
   .header-headline {
-    font-size: 48px; } }
+    font-size: 48px; }
+  .mobile-alignment {
+    text-align: center; } }
 
-/*# sourceMappingURL=main.d6a1bb68f00d6317084c39296b40bace.css.map*/
+/*# sourceMappingURL=main.3bf93d01446cd2a40b35803ca5efe47b.css.map*/

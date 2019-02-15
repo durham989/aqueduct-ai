@@ -6,6 +6,7 @@ import { IndividualBlogComponent } from './blog/individual-blog.component';
 import { WaterUtilityComponent } from './landing-pages/water-utility.component';
 import { WastewaterFacilityComponent } from './landing-pages/wastewater-facility.component';
 import { FarmFishBlogPostComponent } from './blog/farm-fish-post.component';
+import { OurProcessComponent } from './our-process/our-process.component';
 
 export const ROUTES: Routes = [
   { path: '',      component: HomeComponent },
@@ -16,6 +17,7 @@ export const ROUTES: Routes = [
   { path: 'blog/farmer-vs-fish-water-crisis-in-california',  component: FarmFishBlogPostComponent },
   { path: 'water-utility',  component: WaterUtilityComponent },
   { path: 'wastewater-facility',  component: WastewaterFacilityComponent },
+  { path: 'our-process',  component: OurProcessComponent },
   { path: 'detail', loadChildren: './+detail#DetailModule'},
   { path: 'barrel', loadChildren: './+barrel#BarrelModule'},
   { path: '**',    component: NoContentComponent },

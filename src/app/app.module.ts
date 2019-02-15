@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
@@ -28,6 +28,7 @@ import { ConsultationService } from './services/consultation.service';
 import { WhitepaperService } from './services/whitepaper.service';
 import { SharingService } from './services/sharing.service';
 import { BlogService } from './services/blog.service';
+import { CacheInterceptor } from './services/cache-interceptor.service';
 
 // Components
 import { HomeComponent } from './home';
@@ -44,6 +45,7 @@ import { IndividualBlogComponent } from './blog/individual-blog.component';
 import { WaterUtilityComponent } from './landing-pages/water-utility.component';
 import { WastewaterFacilityComponent } from './landing-pages/wastewater-facility.component';
 import { FarmFishBlogPostComponent } from './blog/farm-fish-post.component';
+import { OurProcessComponent } from './our-process/our-process.component';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
@@ -80,6 +82,7 @@ interface StoreType {
     WaterUtilityComponent,
     WastewaterFacilityComponent,
     FarmFishBlogPostComponent,
+    OurProcessComponent,
   ],
   /**
    * Import Angular's modules.
@@ -120,6 +123,7 @@ interface StoreType {
     WhitepaperService,
     SharingService,
     BlogService,
+    { provide: HTTP_INTERCEPTORS, useClass: CacheInterceptor, multi: true },
   ],
 })
 export class AppModule {}

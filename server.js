@@ -21,6 +21,14 @@ var connection = mysql.createConnection({
 
 function startConnection() {
   console.log('CONNECTING');
+  // var connection = mysql.createPool({
+  //   connectionLimit: 50,
+  //   host: process.env.DB_HOST,
+  //   user: process.env.DB_USERNAME,
+  //   password: process.env.DB_PASSWORD,
+  //   database: process.env.DB_DATABASE
+  // });
+  // return connection;
   var connection = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USERNAME,
@@ -44,25 +52,6 @@ function startConnection() {
 }
 
 startConnection();
-
-// var connectionPool = mysql.createPool({
-//   connectionLimit: 10,
-//   host: process.env.DB_HOST,
-//   user: process.env.DB_USERNAME,
-//   password: process.env.DB_PASSWORD,
-//   database: process.env.DB_DATABASE
-// });
-
-// connection.connect();
-// connection.on('error', function (err) {
-//   console.log(err.code); // 'ER_BAD_DB_ERROR'
-//   if(!err.fatal) {
-//     return;
-//   } else {
-//     connection.connect();
-//   }
-// });
-
 
 var app = express();
 // var consultation = require('./routes/consultation/consultation');
@@ -289,11 +278,16 @@ app.route('/consultation/wastewater-facility').post((req, res) => {
 
 // Get All Blog Posts
 app.get('/blog/all', function(req, res) {
-  connection.query('SELECT * FROM blog_posts', function(err, result) {
-    if(err) throw err;
+  connection.query('SELECT * FROM blog_posts', function(error, result) {
+    if(error) throw error;
     if (result) {
-      res.status(200).json({
-        result
+      // res.status(200).json({
+      //   result
+      // });
+      return res.send({
+        error: false,
+        data: result,
+        message: "Successfully returned all blog posts"
       });
     }
   });
@@ -302,11 +296,16 @@ app.get('/blog/all', function(req, res) {
 // Get Individual Blog Post
 app.get('/blog/:id', function(req, res) {
   var id = req.params.id;
-  connection.query('SELECT * FROM blog_posts WHERE id = ' + id, function(err, result) {
-    if(err) throw err;
+  connection.query('SELECT * FROM blog_posts WHERE id = ' + id, function(error, result) {
+    if(error) throw error;
     if (result) {
-      res.status(200).json({
-        result
+      // res.status(200).json({
+      //   result
+      // });
+      return res.send({
+        error: false,
+        data: result,
+        message: "Successfully returned individual blog post"
       });
     }
   });

@@ -46,6 +46,10 @@ export class NavbarComponent implements OnInit {
     this.scrollToPageSection(destination);
   }
 
+  navigateToOurProcess() {
+    this.router.navigate(['/our-process']);
+  }
+
   navigateToBlog() {
     this.router.navigate(['/blog']);
   }
